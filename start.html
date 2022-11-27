@@ -40,11 +40,11 @@
                 console.log(event);
                 rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
                 if (rotation >= 2000 || rotation <=-2000){
-                  document.getElementById("caso").style.backgroundColor = "white";
+                  document.getElementById("blackScreen").style.backgroundColor = "white";
                   document.getElementById("startBtn").remove(); //remove button
                 }
                 // else {
-                //   document.getElementById("caso").style.backgroundColor = "#000";
+                //   document.getElementById("blackScreen").style.backgroundColor = "#000";
                 // }
             });
        // Add a listener to get smartphone orientation
