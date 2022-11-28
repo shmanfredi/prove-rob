@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>tag-sconosciuta</title>
+    <title>start</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -42,7 +42,6 @@
                 console.log(event);
                 rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
                 if (rotation >= 2000 || rotation <=-2000){
-                                    // document.getElementById("blackScreen").fadeTo("slow", 0);
                     
                   document.getElementById("blackScreen").style.backgroundColor = "white";
 
