@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
+    <script src="sketch.js"></script>
 </head>
 <body style="width:1194px; height:834px">
     <div id="blackScreen">
@@ -19,7 +20,7 @@
     left: 0;
     right: 0;
     margin: auto;">
-    <button id="startBtn" style="height:50px;" onclick="toggleFullScreen();getRotation()">
+    <button id="startBtn" style="height:50px;" onclick="schermoIntero()">
     <!-- <button id="startBtn" style="height:50px;" onclick="getRotation()"> -->
         <p>Start</p>
     </button>
@@ -33,16 +34,16 @@
 
 
 
-<script>
+<!-- <script>
     var rotation = 0;
 
-    function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
-    document.exitFullscreen();
-  }
-}
+//     function toggleFullScreen() {
+//   if (!document.fullscreenElement) {
+//     document.documentElement.requestFullscreen();
+//   } else if (document.exitFullscreen) {
+//     document.exitFullscreen();
+//   }
+// }
     function getRotation(){
     // let fs = fullscreen();
     // fullscreen(!fs);
@@ -76,4 +77,4 @@
     });
 }
 
-</script>
+</script> -->
