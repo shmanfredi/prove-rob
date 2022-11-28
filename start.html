@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script>
 </head>
 <body style="width:1194px; height:834px">
     <div id="blackScreen">
@@ -18,7 +19,8 @@
     left: 0;
     right: 0;
     margin: auto;">
-    <button id="startBtn" style="height:50px;" onclick="getRotation()">
+    <button id="startBtn" style="height:50px;" onclick="toggleFullScreen()">
+    <!-- <button id="startBtn" style="height:50px;" onclick="getRotation()"> -->
         <p>Start</p>
     </button>
 </div>
@@ -29,7 +31,7 @@
 </body>
 </html>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.min.js"></script> -->
+
 
 <script>
     var rotation = 0;
@@ -41,34 +43,37 @@
     document.exitFullscreen();
   }
 }
-    function getRotation(){
-        toggleFullScreen();
-    DeviceMotionEvent.requestPermission().then(response => {
-        if (response == 'granted') {
+//     function getRotation(){
+//     // let fs = fullscreen();
+//     // fullscreen(!fs);
 
-        // Add a listener to get smartphone acceleration
-            // in the XYZ axes (units in m/s^2)
-            window.addEventListener('devicemotion', (event) => {
-                // console.log(event);
-                rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
-                if (rotation >= 2000 || rotation <=-2000){
+//     // toggleFullScreen();
+//     DeviceMotionEvent.requestPermission().then(response => {
+//         if (response == 'granted') {
+
+//         // Add a listener to get smartphone acceleration
+//             // in the XYZ axes (units in m/s^2)
+//             window.addEventListener('devicemotion', (event) => {
+//                 // console.log(event);
+//                 rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
+//                 if (rotation >= 2000 || rotation <=-2000){
                     
-                  document.getElementById("blackScreen").style.backgroundColor = "white";
+//                   document.getElementById("blackScreen").style.backgroundColor = "white";
 
-                  document.getElementById("startBtn").remove(); //remove button
-                //   document.getElementById("startLogo")
-                }
-                // else {
-                //   document.getElementById("blackScreen").style.backgroundColor = "#000";
-                // }
-            });
-       // Add a listener to get smartphone orientation
-           // in the alpha-beta-gamma axes (units in degrees)
-            window.addEventListener('deviceorientation',(event) => {
-                // console.log(event);
-            });
-        }
-    });
-}
+//                   document.getElementById("startBtn").remove(); //remove button
+//                 //   document.getElementById("startLogo")
+//                 }
+//                 // else {
+//                 //   document.getElementById("blackScreen").style.backgroundColor = "#000";
+//                 // }
+//             });
+//        // Add a listener to get smartphone orientation
+//            // in the alpha-beta-gamma axes (units in degrees)
+//             window.addEventListener('deviceorientation',(event) => {
+//                 // console.log(event);
+//             });
+//         }
+//     });
+// }
 
 </script>
