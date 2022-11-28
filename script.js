@@ -36,12 +36,11 @@ var swiper = new Swiper(".mySwiper", {
   },
 
 });
+
 swiper.on('progress', function () {
   console.log(swiper.progress);
   document.getElementById('wrapperS').style.marginLeft=(-300+swiper.progress*120)+'px'
 });
-
-
 
 
 fetch('./armadio.json')
