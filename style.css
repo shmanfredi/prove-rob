@@ -70,6 +70,12 @@ body{
   background-color: #FAFAFA;
 }
 
+.contenuto{
+  transform:scale(90%);
+  transform-origin: 0px;
+  transform:translateY(4px);
+}
+
 .error{
   text-align: center;
 }
