@@ -42,9 +42,11 @@
                 console.log(event);
                 rotation = Math.floor((event.rotationRate.alpha)*100)+Math.floor((event.rotationRate.beta)*100)+Math.floor((event.rotationRate.gamma)*100);
                 if (rotation >= 2000 || rotation <=-2000){
-                //   document.getElementById("blackScreen").style.backgroundColor = "white";
-                document.getElementById("blackScreen").fadeTo("slow", 0);
-                //   document.getElementById("startBtn").remove(); //remove button
+                                    // document.getElementById("blackScreen").fadeTo("slow", 0);
+                    
+                  document.getElementById("blackScreen").style.backgroundColor = "white";
+
+                  document.getElementById("startBtn").remove(); //remove button
                 //   document.getElementById("startLogo")
                 }
                 // else {
